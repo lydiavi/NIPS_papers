@@ -1,0 +1,52 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-toml
+      - id: check-added-large-files
+
+  - repo: https://github.com/floatingpurr/sync_with_poetry
+    rev: "1.1.0" # the revision or tag to clone at
+    hooks:
+      - id: sync_with_poetry
+        args: [] # optional args
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.11
+    hooks:
+      # Run the formatter.
+      - id: ruff-format
+      # Run the linter
+      - id: ruff
+        args: [--exit-non-zero-on-fix, --fix]
+
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.8.0
+    hooks:
+      - id: mypy
+        types: [python]
+        args:
+          [
+            --config-file=./pyproject.toml,
+            --ignore-missing-imports,
+            src,
+          ]
+        additional_dependencies: ["types-PyYAML"]
+        exclude: notebooks
+        pass_filenames: false
+
+  # NO TEST TO RUN
+  # - repo: local
+  #   hooks:
+  #     - id: pytest
+  #       name: pytest
+  #       types: [python]
+  #       entry: poetry run pytest
+  #       language: system
+  #       pass_filenames: false
