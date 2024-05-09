@@ -135,15 +135,6 @@ full_check: ## Lance le formattage, le linting avec ruff et le check mypy
 	@echo "${YELLOW}Start static typing analysis with mypy:${NORMAL}"
 	poetry run mypy ${PACKAGE_DIR}
 
-#################################################################################
-# UNIT TESTS COMMANDS                                                           #
-#################################################################################
-
-tests: ## Lance les tests du dossier tests/
-	@echo ""
-	@echo "${YELLOW}Pytest code:${NORMAL}"
-	@make --no-print-directory helper-line
-	poetry run pytest
 
 #################################################################################
 # DOCUMENTATION COMMANDS                                                        #
@@ -174,7 +165,7 @@ streamlit_installed: ## Vérifie l'installation de streamlit dans l'environnemen
 		echo "${YELLOW}streamlit non installé.${NORMAL}"; \
 		exit 1; \
 	fi
-# TODO : Remove all docker related stuff 
+# TODO : Remove all docker related stuff
 streamlit_build: streamlit_installed docker_installed ## Construit l'image docker pour l'application streamlit
 	$(eval PROJECT_NAME = $(shell ${PYTHON_INTERPRETER} -c 'import toml; print(toml.load("pyproject.toml")["tool"]["poetry"]["name"])'))
 	docker build --build-arg HTTP_PROXY=${http_proxy} --build-arg HTTPS_PROXY=${https_proxy} -t ${PROJECT_NAME}-streamlit .
