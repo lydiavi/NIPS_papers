@@ -1,0 +1,5 @@
+[repositories.PyPI]
+url = "https://pypi.org"
+
+[repositories.fpho]
+url = "https://files.pythonhosted.org"

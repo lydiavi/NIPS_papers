@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+
+# Distribution / packaging
+env/
+build/
+dist/
+
+
+# Unit test / coverage logs
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+
+# Sphinx documentation
+docs/_build/
+
+# DotEnv configuration / # virtual environment
+.env*
+venv/
+.venv/
+
+# VS Code
+.vscode/
+
+# Jupyter NB Checkpoints
+.ipynb_checkpoints/
+
+# Mac OS-specific storage files
+.DS_Store
+
+# Mypy cache
+.mypy_cache/
+
+# Exclude folders that are relevant to local dev only
+/data/*
+!/data/*/
+/data/*/*
+!/data/*/.gitkeep
+
+/logs/*
+!/logs/.gitkeep
+
+/models/*
+!/models/.gitkeep
+
+# local mlflow files
+mlruns/
+.databricks
+
+# Streamlit
+.streamlit/secrets.toml
