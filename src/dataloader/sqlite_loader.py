@@ -19,7 +19,7 @@ class SQLITELoader(DataLoader):
         self.path_to_files: str = path_to_files
 
     def read_filter_data(self, years: List[int] | None = None) -> dict[str, pd.DataFrame]:
-        """Read from SQLite Database and filter according to years.
+        """Read from SQLite Database and filter according to years. Verification on data schema and unique key.
 
         Args:
             years (List[int]): list of years to keep
