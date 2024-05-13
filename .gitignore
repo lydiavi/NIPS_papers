@@ -59,4 +59,3 @@ mlruns/
 # Streamlit
 .streamlit/secrets.toml
 notebooks/lib/
-*.html
