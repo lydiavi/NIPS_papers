@@ -1,9 +1,8 @@
 NIPS Papers
 ==============================
 
-## 🖊️ Expliquez votre projet
+## 🖊️ Rappel du problème
 
-Rappel du problème :
 Nous souhaitons explorer la base de données des articles de la conférence NeurIPS de 1987 à 2016.
 Télécharger le jeu de données se trouvant ici : https://www.kaggle.com/datasets/benhamner/nips-papers
 
@@ -15,7 +14,10 @@ Télécharger le jeu de données se trouvant ici : https://www.kaggle.com/datase
 
     2. Question bonus : sans nécessairement les implémenter, réfléchir à d’autres méthodes d’exploration et/ou visualisation de ce jeu de données, idéalement en prenant en compte les titres / abstracts / contenus des articles. Nous aborderons ces autres pistes d’exploration le jour de l’entretien.
 
-------------
+## 🎁 Livrable du Projet
+
+Le notebook sous `notebooks/NIPS_Paper.ipynb` répond aux questions posées ci-dessus.
+De plus, un streamlit d'exploration est lançable via la commande #TODO
 
 ## 📦 Installation du projet
 
@@ -32,3 +34,8 @@ _Prérequis_
 * `make format` Pour lancer le formattage du code avec Ruff
 * `make lint` Pour lancer le linting du code avec Ruff
 * `make full_check` Pour lancer le formattage et le linting du code avec Ruff, et l'analyse statique avec mypy
+
+## Ressources
+* https://sites.google.com/site/findcommunities/
+* https://python-louvain.readthedocs.io/en/latest/index.html
+* https://www.kaggle.com/code/kevinvdsk/community-detection
