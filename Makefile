@@ -123,7 +123,7 @@ lint:  ## Lance le linter ruff
 
 format: ## Lance le formattage des fichiers python avec Ruff
 	@echo "${YELLOW}Start formatting with ruff:${NORMAL}"
-	poetry run ruff format --check --diff ${PACKAGE_DIR}
+	poetry run ruff format --diff ${PACKAGE_DIR}
 
 
 full_check: ## Lance le formattage, le linting avec ruff et le check mypy
