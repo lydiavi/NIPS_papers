@@ -12,7 +12,7 @@ Télécharger le jeu de données se trouvant ici : https://www.kaggle.com/datase
     Mettre en évidence des auteurs remarquables par la méthode de votre choix.
     Privilégier la clarté et la lisibilité du code plutôt que la complexité des traitements.
 
-    2. Question bonus : sans nécessairement les implémenter, réfléchir à d’autres méthodes d’exploration et/ou visualisation de ce jeu de données, idéalement en prenant en compte les titres / abstracts / contenus des articles. Nous aborderons ces autres pistes d’exploration le jour de l’entretien.
+    2. Question bonus : sans nécessairement les implémenter, réfléchir à d’autres méthodes d’exploration et/ou visualisation de ce jeu de données, idéalement en prenant en compte les titres / abstracts / contenus des articles.
 
 ## 🎁 Livrable du Projet
 
