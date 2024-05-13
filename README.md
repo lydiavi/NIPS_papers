@@ -16,7 +16,7 @@ Télécharger le jeu de données se trouvant ici : https://www.kaggle.com/datase
 
 ## 🎁 Livrable du Projet
 
-Le notebook sous `notebooks/NIPS_Paper.ipynb` répond aux questions posées ci-dessus.
+Le notebook sous `notebooks/1.NIPS_Paper.ipynb` répond aux questions posées ci-dessus.
 
 ## 📦 Installation du projet
 
