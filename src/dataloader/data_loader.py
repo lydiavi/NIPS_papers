@@ -19,12 +19,10 @@ class DataLoader(ABC):
         """
         pass
 
-    @abstractmethod
-    def check_data_integrity(self):
-        """_summary_."""
-        # TODO check for data quality problems like nas, unique ids, etc.
-        # TODO remove decorator once done
-        pass
+    # def check_data_integrity(self, df):
+    #     """_summary_."""
+    #     # TODO check for data quality problems like nas, unique ids, etc.
+    #     pass
 
     def check_data_schema(self, data_col, expected_col) -> None:
         """Checking wether received columns match expected columns.
