@@ -19,10 +19,18 @@ class DataLoader(ABC):
         """
         pass
 
-    # def check_data_integrity(self, df):
-    #     """_summary_."""
-    #     # TODO check for data quality problems like nas, unique ids, etc.
-    #     pass
+    def check_data_integrity(self, df: pd.DataFrame) -> None:
+        """Removing lines with full nas, checking for unique id.
+
+        Args:
+            df (pd.DataFrame): DataFrame containing at least "id" column
+
+        Raises:
+            Exception: If id isn't unique, raises error
+        """
+        df.dropna(how="all", inplace=True)
+        if not df["id"].is_unique:
+            raise Exception("Id is not unique")
 
     def check_data_schema(self, data_col, expected_col) -> None:
         """Checking wether received columns match expected columns.

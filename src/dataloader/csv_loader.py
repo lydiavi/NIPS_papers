@@ -36,6 +36,10 @@ class CSVLoader(DataLoader):
         self.check_data_schema(authors_df.columns, EXPECTED_COL_AUTHORS)
         self.check_data_schema(paper_authors_df.columns, EXPECTED_COL_PAPER_AUTHORS)
         self.check_data_schema(papers_df.columns, EXPECTED_COL_PAPERS)
+
+        self.check_data_integrity(authors_df)
+        self.check_data_integrity(paper_authors_df)
+        self.check_data_integrity(papers_df)
         # TODO Filter in seperate func ?
         if years:
             papers_df = papers_df.loc[papers_df["year"].isin(years)]
